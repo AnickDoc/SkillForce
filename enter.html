@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillForce</title>
+  <meta name="description" content="Курсы для сотрудников в сфере БФЛ">
+  <meta name="Keywords" content="Курсы, БФЛ, отдел продаж, Обучайте сотрудников">
+  <meta property="og:url" content="" />
+  <meta property="og:title" content="Обучайте сотрудников или учитесь сами на курсах для менеджеров отдела продаж" />
+  <meta property="og:description" content="Курсы для сотрудников в сфере БФЛ" />
+  <meta property="og:image" content="https://tiktok.femidaforce.ru/img/logo.svg" />
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script
+    src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;coordorder=longlat&amp;apikey=bbca1236-7429-44c5-b54e-add0f752bab5"
+    type="text/javascript"></script>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header class="header">
+      <div class="header-enter__bg bg">
+        <div class="container">
+          <div class="header__top">
+            <a href="#" class="header__logo">
+              <img src="img/logo.png" alt="логотип" />
+            </a>
+            <div class="header__links">
+              <a href="tel:+74951183934" class="header__link">
+                + 7 495 118 39 34
+              </a>
+            </div>
+          </div>
+
+          <div class="header__enter-body">
+            <div class="header__reg-content">
+              <h1 class="header__reg-title">
+                Вход
+              </h1>
+
+              <form class="header__enter-form" action="send.php" method="post" id="form2">
+                <input type="hidden" value="" name="city">
+                <input type="hidden" value="" name="new_region">
+                <input type="hidden" name="params"
+                  value="<?= !empty($params) ? base64_encode(json_encode($params)) : null ?>">
+                <input type="hidden" value="<?= $_SERVER['QUERY_STRING'] ?>" name="query_string">
+
+                <label class="header__reg-label">
+                  <input class="header__reg-input input" type="email" name="email" placeholder="mail@mail.ru">
+                </label>
+
+                <label class="header__reg-label">
+                  <div class="password">
+                    <input class="header__reg-input input" type="password" name="password" placeholder="--------">
+                    <a href="#" class="password-control password-control--1"></a>
+                  </div>
+                  <div class="error">Неправильно указаны почта и/или пароль</div>
+                </label>
+                <button type="submit" class="header__reg-btn btn">Войти</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main"></main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__links">
+            <a href="tel:+74951183934" class="footer__link">
+              + 7 495 118 39 34
+            </a>
+            <a href="mailto:info@femidafors.ru" class="footer__link">
+              info@femidafors.ru
+            </a>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#">
+                  <img class="footer__img" src="img/tik-tok.png" alt="tiktok">
+                </a>
+              </li>
+
+              <li class="footer__item">
+                <a href="#">
+                  <img class="footer__img" src="img/instagram.png" alt="instagram">
+                </a>
+              </li>
+
+              <li class="footer__item">
+                <a href="#">
+                  <img class="footer__img" src="img/telegram.png" alt="telegram">
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div href="#" class="footer__logo">
+            <a href="#" class="footer__logo-link">
+              <img src="img/logo-footer.png" alt="логотип" />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__box">
+            <address class="footer__address">
+              344038 г.Ростов-на-Дону,
+              пр.Михаила Нагибина, 14а, офис 544
+            </address>
+            <div class="footer__nav">
+              <a href="#" class="footer__bottom-link">
+                ПОЛИТИКА ПЕРСОНАЛЬНЫХ ДАННЫХ
+              </a>
+              <a href="#" class="footer__bottom-link">
+                ДОГОВОР ОФЕРТЫ
+              </a>
+              <a href="#" class="footer__bottom-link">
+                ПРАВИЛА ПОЛЬЗОВАНИЯ САЙТОМ
+              </a>
+            </div>
+          </div>
+
+          <ul class="footer__copy">
+            <li>ИНН: 6167130086</li>
+            <li>ОГРН: 1156196049415</li>
+            <li>Все права защищены, 2020 ООО “ИСМ”</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+  </script> -->
+
+  <!-- <form action="senn.php" method="post" id="form1" onsubmit="yaCounter67131874.reachGoal('consult'); return true;">
+   <input type="hidden" value="" name="city">
+   <input type="hidden" value="" name="new_region">
+   <input type="hidden" name="params" value="<?= !empty($params) ? base64_encode(json_encode($params)) : null ?>">
+   <input type="hidden" value="<?= $_SERVER['QUERY_STRING'] ?>" name="query_string">
+
+
+   <input class="inp1" type="text" name="fio" placeholder="ФИО" required>
+   <input class="inp1" type="tel" name="phone" placeholder="Телефон" required>
+   <input class="inp1" type="email" required name="email" placeholder="Ваша почта">
+   <select class="inp1" required name="summ">
+       <option value="" selected disabled>Сумма ущерба</option>
+       <option value="90000">до 100 тыс. рублей</option>
+       <option value="200000">от 100 до 300 тыс. рублей</option>
+       <option value="300000">от 300 тыс. рублей (экстренная помощь)</option>
+   </select>
+   <button class="give">Получить помощь</button>
+</form> -->
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <!-- <script src="js/slick.js"></script> -->
+  <script src="js/jquery.maskedinput.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
